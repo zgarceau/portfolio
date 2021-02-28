@@ -1,26 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import { AppBar } from './components/AppBar';
+import { MyAppbar } from './components/AppBar';
+import { Typography } from '@material-ui/core';
 
-function App(){
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>My Portfolio</h1>
-	      <h2>Author: Zachary Garceau</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() { 
+    return (
+      <div className="App">
+        <MyAppbar />
+        <header className="App-header">
+          <Typography>
+            Hello newcomer, you have discovered my portfolio website!
+          </Typography>
+        </header>
+      </div>
+    );
+  } 
 }
 
 export default App;
