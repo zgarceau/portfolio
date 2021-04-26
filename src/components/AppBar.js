@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { Typography } from '@material-ui/core';
 import { Redirect } from 'react-router-dom'
 
+//This makes a theme for the AppBar
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -17,8 +18,14 @@ const theme = createMuiTheme({
     },
 });
 
-const redirect = () => {
+//Redirect function for the Experience Page
+const redirectEP = () => {
     return <Redirect to='/experiencePage' />
+};
+
+//Redirect function for the About Me Page
+const redirectAMP = () => {
+    return <Redirect to='/aboutMe' />
 };
 
 export function MyAppbar() {
@@ -30,7 +37,6 @@ export function MyAppbar() {
                         <Button variant="contained" 
                                 color="secondary" 
                                 style={{ marginRight: "1em" }}
-                                onClick={redirect}
                         >
                             <Typography style={{ color: '#5b1c93', fontWeight: "600" }}>
                                 Home Page
@@ -40,6 +46,7 @@ export function MyAppbar() {
                             variant="contained" 
                             color="secondary" 
                             style={{ marginRight: "1em" }}
+                            onClick={redirectEP}
                         >
                             <Typography style={{ color: '#5b1c93', fontWeight: "600" }}>
                                 Experience
@@ -48,6 +55,7 @@ export function MyAppbar() {
                         <Button 
                             variant="contained" 
                             color="secondary"
+                            onClick={redirectAMP}
                         >
                             <Typography style={{ color: '#5b1c93', fontWeight: "600" }}>
                                 About Me
